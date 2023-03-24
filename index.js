@@ -5,7 +5,6 @@ const app = express()
 const PORT = 5000
 
 app.get('/', (req,res) => {	
-	res.json(`Hello from ${os.hostname()}`)
+	res.json(`Hello from ${os.hostname()} at ${new Date()}`)
 })
-
 app.listen(PORT, () => console.log(`Server running in port ${PORT}`))

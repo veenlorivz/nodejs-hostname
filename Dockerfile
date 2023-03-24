@@ -1,9 +1,11 @@
-FROM nginx
+FROM node:alpine
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /app
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 5000
+
+CMD ["npm", "start"]
 
 
